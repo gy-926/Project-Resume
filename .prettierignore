@@ -1,0 +1,6 @@
+dist
+node_modules
+*.d.ts
+.eslintrc-auto-import.json
+pnpm-lock.yaml
+package-lock.json
