@@ -39,7 +39,7 @@ const skillCategories = [
 </script>
 
 <template>
-  <MainLayout>
+  <MainLayout :fluid="true">
     <NSpace vertical :size="24">
       <NH2>技能专长</NH2>
 

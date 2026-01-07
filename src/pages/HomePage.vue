@@ -1,25 +1,553 @@
 <script setup lang="ts">
 import MainLayout from '@/layouts/MainLayout.vue'
-import { NButton, NSpace, NH1, NP, NGradientText } from 'naive-ui'
+import {
+  NButton,
+  NH1,
+  NH2,
+  NH3,
+  NP,
+  NText,
+  NGrid,
+  NGridItem,
+  NCard,
+  NAvatar,
+  NIcon,
+  NDivider
+} from 'naive-ui'
+import {
+  CodeOutline,
+  DesktopOutline,
+  PhonePortraitOutline,
+  FileTrayFullOutline,
+  ConstructOutline,
+  PeopleOutline,
+  MailOutline,
+  CallOutline,
+  LocationOutline
+} from '@vicons/ionicons5'
 </script>
 
 <template>
-  <MainLayout>
-    <div class="flex items-center justify-center" style="min-height: 60vh">
-      <div class="text-center max-w-3xl">
-        <NH1 class="!text-5xl !font-bold !mb-6">
-          <NGradientText type="primary"> 欢迎来到我的个人简历 </NGradientText>
-        </NH1>
-        <NP class="!text-xl !mb-8"> 展示我的技能、项目经验和专业背景 </NP>
-        <NSpace justify="center" :size="16">
-          <RouterLink to="/projects">
-            <NButton type="primary" size="large" round> 查看项目 </NButton>
-          </RouterLink>
-          <RouterLink to="/contact">
-            <NButton size="large" round> 联系我 </NButton>
-          </RouterLink>
-        </NSpace>
-      </div>
+  <MainLayout :fluid="true">
+    <div class="home-page">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-text">
+            <NH1 class="hero-name"> 张晓明 </NH1>
+            <NText class="hero-title" depth="2"> 前端开发工程师 | UI 设计师 </NText>
+            <NP class="hero-description">
+              拥有 5 年前端开发经验，专注于用户产品设计和前端技术实现。擅长 React、Vue.js 和现代 CSS
+              框架，具有丰富的跨端开发和响应式开发经验。
+            </NP>
+            <NButton type="primary" size="large" round class="download-btn"> 下载简历 </NButton>
+          </div>
+          <div class="hero-avatar">
+            <NAvatar
+              round
+              :size="280"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section">
+        <div class="section-container">
+          <NH2 class="section-title"> 专业技能 </NH2>
+          <NGrid :x-gap="24" :y-gap="24" :cols="3" responsive="screen">
+            <NGridItem>
+              <NCard hoverable class="skill-card">
+                <div class="skill-header">
+                  <NIcon size="32" color="#18a058">
+                    <CodeOutline />
+                  </NIcon>
+                  <NH3 class="skill-title"> 前端开发 </NH3>
+                </div>
+                <NText depth="2" class="skill-desc">
+                  精通 HTML、CSS、JavaScript，熟练使用 React、Vue.js
+                  框架，具备丰富的响应式开发经验。
+                </NText>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="skill-card">
+                <div class="skill-header">
+                  <NIcon size="32" color="#2080f0">
+                    <DesktopOutline />
+                  </NIcon>
+                  <NH3 class="skill-title"> UI 设计 </NH3>
+                </div>
+                <NText depth="2" class="skill-desc">
+                  熟练使用 Figma、Sketch 进行产品设计，注重用户体验，追求简洁高效的设计风格。
+                </NText>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="skill-card">
+                <div class="skill-header">
+                  <NIcon size="32" color="#f0a020">
+                    <PhonePortraitOutline />
+                  </NIcon>
+                  <NH3 class="skill-title"> 响应式设计 </NH3>
+                </div>
+                <NText depth="2" class="skill-desc">
+                  专注于响应式设计，确保在各类设备和屏幕尺寸上都能提供优质的用户体验。
+                </NText>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="skill-card">
+                <div class="skill-header">
+                  <NIcon size="32" color="#d03050">
+                    <FileTrayFullOutline />
+                  </NIcon>
+                  <NH3 class="skill-title"> 后端整合 </NH3>
+                </div>
+                <NText depth="2" class="skill-desc">
+                  了解 Node.js、Python 等后端，熟悉前后端 API 对接和数据请求流程优化等。
+                </NText>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="skill-card">
+                <div class="skill-header">
+                  <NIcon size="32" color="#18a058">
+                    <ConstructOutline />
+                  </NIcon>
+                  <NH3 class="skill-title"> 构建工具 </NH3>
+                </div>
+                <NText depth="2" class="skill-desc">
+                  熟练使用 Webpack、Vite 等构建工具，优化项目性能和开发效率。
+                </NText>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="skill-card">
+                <div class="skill-header">
+                  <NIcon size="32" color="#2080f0">
+                    <PeopleOutline />
+                  </NIcon>
+                  <NH3 class="skill-title"> 团队协作 </NH3>
+                </div>
+                <NText depth="2" class="skill-desc">
+                  具备良好的团队协作能力和沟通能力，熟悉使用 Git、Jira 等协作工具。
+                </NText>
+              </NCard>
+            </NGridItem>
+          </NGrid>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section projects-section">
+        <div class="section-container">
+          <NH2 class="section-title"> 项目作品 </NH2>
+          <NGrid :x-gap="24" :y-gap="24" :cols="3" responsive="screen">
+            <NGridItem>
+              <NCard hoverable class="project-card" cover-style="height: 200px; overflow: hidden;">
+                <template #cover>
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                    alt="在线购物平台"
+                  />
+                </template>
+                <NH3>在线购物平台</NH3>
+                <NText depth="2" class="project-desc">
+                  基于 React 和 Node.js 构建的跨境电商平台，包含商品展示、购物车、支付等功能。
+                </NText>
+                <div class="project-tech">
+                  <NButton text type="primary" size="small"> MongoDB </NButton>
+                </div>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="project-card" cover-style="height: 200px; overflow: hidden;">
+                <template #cover>
+                  <img
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+                    alt="健身追踪应用"
+                  />
+                </template>
+                <NH3>健身追踪应用</NH3>
+                <NText depth="2" class="project-desc">
+                  移动端健身应用，提供训练计划制定、健康数据追踪功能，使用 React Native 开发。
+                </NText>
+                <div class="project-tech">
+                  <NButton text type="primary" size="small"> Redux </NButton>
+                </div>
+              </NCard>
+            </NGridItem>
+
+            <NGridItem>
+              <NCard hoverable class="project-card" cover-style="height: 200px; overflow: hidden;">
+                <template #cover>
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+                    alt="数据分析仪表板"
+                  />
+                </template>
+                <NH3>数据分析仪表板</NH3>
+                <NText depth="2" class="project-desc">
+                  企业级数据分析平台，通过丰富多样的数据可视化，提供实时数据追踪和预测分析等功能。
+                </NText>
+                <div class="project-tech">
+                  <NButton text type="primary" size="small"> D3.js </NButton>
+                </div>
+              </NCard>
+            </NGridItem>
+          </NGrid>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section">
+        <div class="section-container">
+          <NH2 class="section-title"> 工作经历 </NH2>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <NH3 class="experience-title"> 高级前端工程师 </NH3>
+                  <NText depth="2"> 创新科技有限公司 </NText>
+                </div>
+                <NText depth="3"> 2021 – 至今 </NText>
+              </div>
+              <NP class="experience-desc">
+                负责公司核心产品的前端框架开发，参与产品设计和用户体验优化，带领 3
+                人前端团队完成多个重要项目。
+              </NP>
+            </div>
+
+            <NDivider />
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <NH3 class="experience-title"> 前端开发工程师 </NH3>
+                  <NText depth="2"> 数字服务开发公司 </NText>
+                </div>
+                <NText depth="3"> 2019 – 2021 </NText>
+              </div>
+              <NP class="experience-desc">
+                参与多个企业级项目开发和开发，负责网页端和移动端的用户体验，提升了项目的整体用户体验。
+              </NP>
+            </div>
+
+            <NDivider />
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <NH3 class="experience-title"> UI 设计师 </NH3>
+                  <NText depth="2"> 视觉设计工作室 </NText>
+                </div>
+                <NText depth="3"> 2018 – 2019 </NText>
+              </div>
+              <NP class="experience-desc">
+                专注于用户产品设计计，为多个中小型企业提供设计服务，积累了丰富的用户设计经验。
+              </NP>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section contact-section">
+        <div class="section-container">
+          <NH2 class="section-title"> 联系我 </NH2>
+          <NP class="contact-subtitle">
+            如果您对我的技能或项目有兴趣或有任何合作机会，请随时联系我。
+          </NP>
+          <NGrid :x-gap="48" :y-gap="32" :cols="3" responsive="screen" class="contact-grid">
+            <NGridItem>
+              <div class="contact-item">
+                <NIcon size="32" color="#2080f0">
+                  <MailOutline />
+                </NIcon>
+                <NText class="contact-label"> 邮箱 </NText>
+                <NText depth="2"> zhangxiaoming@email.com </NText>
+              </div>
+            </NGridItem>
+            <NGridItem>
+              <div class="contact-item">
+                <NIcon size="32" color="#2080f0">
+                  <CallOutline />
+                </NIcon>
+                <NText class="contact-label"> 电话 </NText>
+                <NText depth="2"> +86 138-0000-0000 </NText>
+              </div>
+            </NGridItem>
+            <NGridItem>
+              <div class="contact-item">
+                <NIcon size="32" color="#2080f0">
+                  <LocationOutline />
+                </NIcon>
+                <NText class="contact-label"> 地址 </NText>
+                <NText depth="2"> 北京市朝阳区 </NText>
+              </div>
+            </NGridItem>
+          </NGrid>
+        </div>
+      </section>
     </div>
   </MainLayout>
 </template>
+
+<style scoped>
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f5e6ff 100%);
+  padding: 80px 24px;
+  flex-shrink: 0;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-name {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  color: #1a1a1a;
+}
+
+.hero-title {
+  font-size: 20px;
+  color: #666;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 !important;
+}
+
+.download-btn {
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+.hero-avatar {
+  display: flex;
+  justify-content: center;
+}
+
+/* Section Styling */
+.section {
+  padding: 80px 0;
+  flex-shrink: 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px !important;
+  font-weight: 600 !important;
+  margin-bottom: 48px !important;
+  color: #1a1a1a;
+}
+
+/* Skills Section */
+.skill-card {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.skill-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.skill-title {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.skill-desc {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* Projects Section */
+.projects-section {
+  background-color: #fafafa;
+}
+
+.project-card {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 16px 0 12px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.project-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.project-tech {
+  margin-top: 16px;
+}
+
+/* Experience Section */
+.experience-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  padding: 24px 0;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.experience-title {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin: 0 0 8px !important;
+}
+
+.experience-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 !important;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #fafafa;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin: -24px auto 48px !important;
+  max-width: 600px;
+}
+
+.contact-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.contact-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Footer */
+/* 使用 MainLayout 的全局页脚 */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .download-btn {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 48px 24px;
+  }
+
+  .hero-name {
+    font-size: 36px !important;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: 28px !important;
+    margin-bottom: 32px !important;
+  }
+}
+</style>

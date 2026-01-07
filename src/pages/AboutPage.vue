@@ -4,7 +4,7 @@ import { NCard, NSpace, NH2, NP, NGrid, NGridItem, NStatistic } from 'naive-ui'
 </script>
 
 <template>
-  <MainLayout>
+  <MainLayout :fluid="true">
     <NSpace vertical :size="24">
       <NH2>关于我</NH2>
 

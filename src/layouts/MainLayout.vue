@@ -14,6 +14,7 @@ import {
 import { MoonOutline, SunnyOutline, DesktopOutline } from '@vicons/ionicons5'
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+const props = defineProps<{ fluid?: boolean }>()
 
 const themeStore = useThemeStore()
 const route = useRoute()
@@ -82,9 +83,16 @@ const themeIcon = computed(() => {
     </NLayoutHeader>
 
     <NLayoutContent>
-      <div class="container mx-auto px-6 py-8">
-        <slot />
-      </div>
+      <template v-if="!props.fluid">
+        <div class="container mx-auto px-6 py-8">
+          <slot />
+        </div>
+      </template>
+      <template v-else>
+        <div class="px-6 py-8">
+          <slot />
+        </div>
+      </template>
     </NLayoutContent>
 
     <NLayoutFooter bordered class="py-6">

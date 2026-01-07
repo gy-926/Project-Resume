@@ -52,8 +52,8 @@ const contactInfo = [
 </script>
 
 <template>
-  <MainLayout>
-    <div class="max-w-4xl mx-auto">
+  <MainLayout :fluid="true">
+    <div class="w-full">
       <NSpace vertical :size="24">
         <NH2>联系方式</NH2>
 

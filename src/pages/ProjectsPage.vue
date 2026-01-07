@@ -28,7 +28,7 @@ const projects = [
 </script>
 
 <template>
-  <MainLayout>
+  <MainLayout :fluid="true">
     <NSpace vertical :size="24">
       <NH2>项目经验</NH2>
 
