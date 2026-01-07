@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed, watch } from 'vue'
+import { ref, computed } from 'vue'
 import type { GlobalThemeOverrides } from 'naive-ui'
 
 export type ThemeMode = 'light' | 'dark' | 'system'
@@ -9,9 +9,7 @@ const THEME_STORAGE_KEY = 'theme-mode'
 export const useThemeStore = defineStore('theme', () => {
   const mode = ref<ThemeMode>('system')
 
-  const systemPrefersDark = ref(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  )
+  const systemPrefersDark = ref(window.matchMedia('(prefers-color-scheme: dark)').matches)
 
   const isDark = computed(() => {
     if (mode.value === 'system') {
@@ -20,12 +18,16 @@ export const useThemeStore = defineStore('theme', () => {
     return mode.value === 'dark'
   })
 
+  // NaiveUI 主题覆盖配置
   const themeOverrides = computed<GlobalThemeOverrides>(() => ({
     common: {
       primaryColor: '#3b82f6',
       primaryColorHover: '#2563eb',
       primaryColorPressed: '#1d4ed8',
-      primaryColorSuppl: '#60a5fa'
+      primaryColorSuppl: '#60a5fa',
+      borderRadius: '8px',
+      fontFamily:
+        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
     }
   }))
 
@@ -55,14 +57,6 @@ export const useThemeStore = defineStore('theme', () => {
       systemPrefersDark.value = e.matches
     })
   }
-
-  watch(isDark, (dark) => {
-    if (dark) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, { immediate: true })
 
   initTheme()
 

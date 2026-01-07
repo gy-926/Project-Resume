@@ -3,7 +3,9 @@ import vue from 'eslint-plugin-vue'
 import ts from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import vueParser from 'vue-eslint-parser'
-import autoImport from './.eslintrc-auto-import.json' assert { type: 'json' }
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
+const autoImport = require('./.eslintrc-auto-import.json')
 
 export default [
   js.configs.recommended,

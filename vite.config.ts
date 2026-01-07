@@ -4,7 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
-import { fileURLToPath, URL } from 'node:url'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [
@@ -16,12 +19,7 @@ export default defineConfig({
         'vue-router',
         'pinia',
         {
-          'naive-ui': [
-            'useDialog',
-            'useMessage',
-            'useNotification',
-            'useLoadingBar'
-          ]
+          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
         }
       ],
       dts: 'src/auto-imports.d.ts',
@@ -36,7 +34,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': path.resolve(__dirname, './src')
     }
   }
 })
