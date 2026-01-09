@@ -89,9 +89,7 @@ const themeIcon = computed(() => {
         </div>
       </template>
       <template v-else>
-        <div class="px-6 py-8">
-          <slot />
-        </div>
+        <slot />
       </template>
     </NLayoutContent>
 

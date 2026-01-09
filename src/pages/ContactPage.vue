@@ -53,7 +53,7 @@ const contactInfo = [
 
 <template>
   <MainLayout :fluid="true">
-    <div class="w-full">
+    <div class="contact-page">
       <NSpace vertical :size="24">
         <NH2>联系方式</NH2>
 
@@ -114,3 +114,10 @@ const contactInfo = [
     </div>
   </MainLayout>
 </template>
+
+<style scoped>
+.contact-page {
+  min-height: calc(100vh - 180px);
+  padding: 2rem 1.5rem;
+}
+</style>
