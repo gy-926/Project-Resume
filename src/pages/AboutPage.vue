@@ -10,7 +10,7 @@ import { NCard, NSpace, NH2, NP, NGrid, NGridItem, NStatistic } from 'naive-ui'
         <NH2>关于我</NH2>
 
         <NCard title="个人简介" hoverable>
-          <NP> 这里可以添加您的个人简介内容... </NP>
+          <NP>这里可以添加您的个人简介内容...</NP>
         </NCard>
 
         <NCard title="技能概览" hoverable>
@@ -31,7 +31,7 @@ import { NCard, NSpace, NH2, NP, NGrid, NGridItem, NStatistic } from 'naive-ui'
         </NCard>
 
         <NCard title="教育背景" hoverable>
-          <NP> 这里可以添加您的教育背景... </NP>
+          <NP>这里可以添加您的教育背景...</NP>
         </NCard>
       </NSpace>
     </div>

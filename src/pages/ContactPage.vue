@@ -37,10 +37,10 @@ const contactInfo = [
   {
     icon: MailOutline,
     label: '邮箱',
-    value: 'your.email@example.com',
-    href: 'mailto:your.email@example.com'
+    value: '2370786899@qq.com  gy1419883671@gmail.com',
+    href: 'mailto:2370786899@qq.com,gy1419883671@gmail.com'
   },
-  { icon: Call, label: '电话', value: '+86 138 0000 0000', href: 'tel:+8613800000000' },
+  { icon: Call, label: '电话', value: '+86 15152383743', href: 'tel:+8615152383743' },
   { icon: LogoGithub, label: 'GitHub', value: 'github.com/yourname', href: 'https://github.com' },
   {
     icon: LogoLinkedin,

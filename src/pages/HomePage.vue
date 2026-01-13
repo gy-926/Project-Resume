@@ -79,13 +79,13 @@ onUnmounted(() => {
       <section class="hero-section" :style="{ background: heroGradient }">
         <div class="hero-content">
           <div class="hero-text">
-            <NH1 class="hero-name"> 张晓明 </NH1>
-            <NText class="hero-title" depth="2"> 前端开发工程师 | UI 设计师 </NText>
+            <NH1 class="hero-name">张晓明</NH1>
+            <NText class="hero-title" depth="2">前端开发工程师</NText>
             <NP class="hero-description">
-              拥有 5 年前端开发经验，专注于用户产品设计和前端技术实现。擅长 React、Vue.js 和现代 CSS
+              拥有 5 年前端开发经验，专注于用户产品设计和前端技术实现。擅长Vue.js 和现代 CSS
               框架，具有丰富的跨端开发和响应式开发经验。
             </NP>
-            <NButton type="primary" size="large" round class="download-btn"> 下载简历 </NButton>
+            <NButton type="primary" size="large" round class="download-btn">下载简历</NButton>
           </div>
           <div class="hero-avatar">
             <NAvatar
@@ -100,7 +100,7 @@ onUnmounted(() => {
       <!-- Skills Section -->
       <section class="section">
         <div class="section-container">
-          <NH2 class="section-title"> 专业技能 </NH2>
+          <NH2 class="section-title">专业技能</NH2>
           <NGrid :x-gap="24" :y-gap="24" :cols="3" responsive="screen">
             <NGridItem>
               <div class="skill-card-wrapper">
@@ -109,7 +109,7 @@ onUnmounted(() => {
                     <NIcon size="32" color="#18a058">
                       <CodeOutline />
                     </NIcon>
-                    <NH3 class="skill-title"> 前端开发 </NH3>
+                    <NH3 class="skill-title">前端开发</NH3>
                   </div>
                   <NText depth="2" class="skill-desc">
                     精通 HTML、CSS、JavaScript，熟练使用 React、Vue.js
@@ -126,7 +126,7 @@ onUnmounted(() => {
                     <NIcon size="32" color="#2080f0">
                       <DesktopOutline />
                     </NIcon>
-                    <NH3 class="skill-title"> UI 设计 </NH3>
+                    <NH3 class="skill-title">UI 设计</NH3>
                   </div>
                   <NText depth="2" class="skill-desc">
                     熟练使用 Figma、Sketch 进行产品设计，注重用户体验，追求简洁高效的设计风格。
@@ -142,7 +142,7 @@ onUnmounted(() => {
                     <NIcon size="32" color="#f0a020">
                       <PhonePortraitOutline />
                     </NIcon>
-                    <NH3 class="skill-title"> 响应式设计 </NH3>
+                    <NH3 class="skill-title">响应式设计</NH3>
                   </div>
                   <NText depth="2" class="skill-desc">
                     专注于响应式设计，确保在各类设备和屏幕尺寸上都能提供优质的用户体验。
@@ -158,7 +158,7 @@ onUnmounted(() => {
                     <NIcon size="32" color="#d03050">
                       <FileTrayFullOutline />
                     </NIcon>
-                    <NH3 class="skill-title"> 后端整合 </NH3>
+                    <NH3 class="skill-title">后端整合</NH3>
                   </div>
                   <NText depth="2" class="skill-desc">
                     了解 Node.js、Python 等后端，熟悉前后端 API 对接和数据请求流程优化等。
@@ -174,7 +174,7 @@ onUnmounted(() => {
                     <NIcon size="32" color="#18a058">
                       <ConstructOutline />
                     </NIcon>
-                    <NH3 class="skill-title"> 构建工具 </NH3>
+                    <NH3 class="skill-title">构建工具</NH3>
                   </div>
                   <NText depth="2" class="skill-desc">
                     熟练使用 Webpack、Vite 等构建工具，优化项目性能和开发效率。
@@ -190,7 +190,7 @@ onUnmounted(() => {
                     <NIcon size="32" color="#2080f0">
                       <PeopleOutline />
                     </NIcon>
-                    <NH3 class="skill-title"> 团队协作 </NH3>
+                    <NH3 class="skill-title">团队协作</NH3>
                   </div>
                   <NText depth="2" class="skill-desc">
                     具备良好的团队协作能力和沟通能力，熟悉使用 Git、Jira 等协作工具。
@@ -205,7 +205,7 @@ onUnmounted(() => {
       <!-- Projects Section -->
       <section class="section projects-section">
         <div class="section-container">
-          <NH2 class="section-title"> 项目作品 </NH2>
+          <NH2 class="section-title">项目作品</NH2>
           <NGrid :x-gap="24" :y-gap="24" :cols="3" responsive="screen">
             <NGridItem>
               <div class="project-card-wrapper">
@@ -225,7 +225,7 @@ onUnmounted(() => {
                     基于 React 和 Node.js 构建的跨境电商平台，包含商品展示、购物车、支付等功能。
                   </NText>
                   <div class="project-tech">
-                    <NButton text type="primary" size="small"> MongoDB </NButton>
+                    <NButton text type="primary" size="small">MongoDB</NButton>
                   </div>
                 </NCard>
               </div>
@@ -249,7 +249,7 @@ onUnmounted(() => {
                     移动端健身应用，提供训练计划制定、健康数据追踪功能，使用 React Native 开发。
                   </NText>
                   <div class="project-tech">
-                    <NButton text type="primary" size="small"> Redux </NButton>
+                    <NButton text type="primary" size="small">Redux</NButton>
                   </div>
                 </NCard>
               </div>
@@ -273,7 +273,7 @@ onUnmounted(() => {
                     企业级数据分析平台，通过丰富多样的数据可视化，提供实时数据追踪和预测分析等功能。
                   </NText>
                   <div class="project-tech">
-                    <NButton text type="primary" size="small"> D3.js </NButton>
+                    <NButton text type="primary" size="small">D3.js</NButton>
                   </div>
                 </NCard>
               </div>
@@ -285,19 +285,22 @@ onUnmounted(() => {
       <!-- Experience Section -->
       <section class="section">
         <div class="section-container">
-          <NH2 class="section-title"> 工作经历 </NH2>
+          <NH2 class="section-title">工作经历</NH2>
           <div class="experience-list">
             <div class="experience-item">
               <div class="experience-header">
                 <div>
-                  <NH3 class="experience-title"> 高级前端工程师 </NH3>
-                  <NText depth="2"> 创新科技有限公司 </NText>
+                  <NH3 class="experience-title">前端工程师</NH3>
+                  <NText depth="2">南京凯佩软件有限公司</NText>
                 </div>
-                <NText depth="3"> 2021 – 至今 </NText>
+                <NText depth="3">2021 – 至今</NText>
               </div>
               <NP class="experience-desc">
-                负责公司核心产品的前端框架开发，参与产品设计和用户体验优化，带领 3
-                人前端团队完成多个重要项目。
+                1、客户App开发
+                (基于UniApp框架):负责核心功能模块设计与开发，实现跨平台(iOS/Android)应用，提升用户移动端体验。
+              </NP>
+              <NP class="experience-desc">
+                2、客户门户网站开发:主导企业门户网站前端架构设计，采用响应式布局确保多终端适配,开发内容管理系统(CMS)，支持客户自主更新网站内容，降低维护成本。
               </NP>
             </div>
 
@@ -306,30 +309,17 @@ onUnmounted(() => {
             <div class="experience-item">
               <div class="experience-header">
                 <div>
-                  <NH3 class="experience-title"> 前端开发工程师 </NH3>
-                  <NText depth="2"> 数字服务开发公司 </NText>
+                  <NH3 class="experience-title">cocos游戏开发</NH3>
+                  <NText depth="2">南京霍格教育科技有限公司</NText>
                 </div>
-                <NText depth="3"> 2019 – 2021 </NText>
+                <NText depth="3">2020 – 2021</NText>
               </div>
               <NP class="experience-desc">
-                参与多个企业级项目开发和开发，负责网页端和移动端的用户体验，提升了项目的整体用户体验。
+                参与儿童早教课程内容制作和产品设计,主要负责课程游戏内容交互.
               </NP>
             </div>
 
             <NDivider />
-
-            <div class="experience-item">
-              <div class="experience-header">
-                <div>
-                  <NH3 class="experience-title"> UI 设计师 </NH3>
-                  <NText depth="2"> 视觉设计工作室 </NText>
-                </div>
-                <NText depth="3"> 2018 – 2019 </NText>
-              </div>
-              <NP class="experience-desc">
-                专注于用户产品设计计，为多个中小型企业提供设计服务，积累了丰富的用户设计经验。
-              </NP>
-            </div>
           </div>
         </div>
       </section>
@@ -337,7 +327,7 @@ onUnmounted(() => {
       <!-- Contact Section -->
       <section class="section contact-section">
         <div class="section-container">
-          <NH2 class="section-title"> 联系我 </NH2>
+          <NH2 class="section-title">联系我</NH2>
           <NP class="contact-subtitle">
             如果您对我的技能或项目有兴趣或有任何合作机会，请随时联系我。
           </NP>
@@ -347,8 +337,8 @@ onUnmounted(() => {
                 <NIcon size="32" color="#2080f0">
                   <MailOutline />
                 </NIcon>
-                <NText class="contact-label"> 邮箱 </NText>
-                <NText depth="2"> zhangxiaoming@email.com </NText>
+                <NText class="contact-label">邮箱</NText>
+                <NText depth="2">2370786899@qq.com gy1419883671@gmail.com</NText>
               </div>
             </NGridItem>
             <NGridItem>
@@ -356,8 +346,8 @@ onUnmounted(() => {
                 <NIcon size="32" color="#2080f0">
                   <CallOutline />
                 </NIcon>
-                <NText class="contact-label"> 电话 </NText>
-                <NText depth="2"> +86 138-0000-0000 </NText>
+                <NText class="contact-label">电话</NText>
+                <NText depth="2">+86 15152383743</NText>
               </div>
             </NGridItem>
             <NGridItem>
@@ -365,8 +355,8 @@ onUnmounted(() => {
                 <NIcon size="32" color="#2080f0">
                   <LocationOutline />
                 </NIcon>
-                <NText class="contact-label"> 地址 </NText>
-                <NText depth="2"> 北京市朝阳区 </NText>
+                <NText class="contact-label">地址</NText>
+                <NText depth="2">北京市朝阳区</NText>
               </div>
             </NGridItem>
           </NGrid>

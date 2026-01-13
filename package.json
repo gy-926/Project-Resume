@@ -30,6 +30,8 @@
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-vue": "^9.31.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",

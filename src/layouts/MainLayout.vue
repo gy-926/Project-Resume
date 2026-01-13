@@ -64,7 +64,7 @@ const themeIcon = computed(() => {
   <NLayout>
     <NLayoutHeader bordered>
       <div class="px-6 py-4 flex justify-between items-center">
-        <NText tag="h1" class="text-xl font-bold"> 个人简历 </NText>
+        <NText tag="h1" class="text-xl font-bold">个人简历</NText>
         <NSpace align="center" :size="16">
           <NMenu
             v-model:value="activeKey"
@@ -95,7 +95,7 @@ const themeIcon = computed(() => {
 
     <NLayoutFooter bordered class="py-6">
       <div class="text-center">
-        <NText depth="3"> &copy; 2025 个人项目简历. Built with Vue 3 + TypeScript + NaiveUI </NText>
+        <NText depth="3">&copy; 2025 个人项目简历. Built with Vue 3 + TypeScript + NaiveUI</NText>
       </div>
     </NLayoutFooter>
   </NLayout>
